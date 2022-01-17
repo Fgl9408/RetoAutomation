@@ -27,23 +27,22 @@ public class Main {
             Scanner lectorArchivoInsumo = new Scanner(archivoInsumo);
 
             if (archivoInsumo.exists()) {
-                String[] parts;
+                String[] divideFilaArchivo;
                 ArrayList<String> lista = new ArrayList<String>();
                 while (lectorArchivoInsumo.hasNextLine()) {
                     numeroLineasArchivo++;
                     datos = lectorArchivoInsumo.nextLine();
                     System.out.println(datos);
-                    parts = datos.split("-");
-                    lista.addAll(Arrays.asList(parts));
+                    divideFilaArchivo = datos.split("-"); 
+                    lista.addAll(Arrays.asList(divideFilaArchivo));
                 }
                 System.out.println("---------------------");
-                System.out.println(numeroLineasArchivo);
+                System.out.println("Numero Filas Archivo: "+ numeroLineasArchivo);
                 System.out.println("---------------------");
 
                 for (int i = 0; i < lista.size(); i++) {
                     System.out.println(lista.get(i));
                 }
-
             }
             lectorArchivoInsumo.close();
         } catch (FileNotFoundException e) {
