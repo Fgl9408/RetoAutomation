@@ -33,7 +33,7 @@ public class Main {
                     numeroLineasArchivo++;
                     datos = lectorArchivoInsumo.nextLine();
                     System.out.println(datos);
-                    divideFilaArchivo = datos.split("-"); 
+                    divideFilaArchivo = datos.split("-");;
                     lista.addAll(Arrays.asList(divideFilaArchivo));
                 }
                 System.out.println("---------------------");
